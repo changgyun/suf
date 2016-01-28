@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ODM Admin</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/handsontable/dist/handsontable.full.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="node_modules/jquery-ui/themes/smoothness/jquery-ui.min.css">-->
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/datatables.net-bs/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/datatables.net-select-bs/css/select.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <!--[if lte IE 9]><script src="node_modules/aight/aight.min.js"></script><![endif]-->
+</head>
+<body>
+    <!-- Header -->
+    <header></header>
+    <!-- Global Menu -->
+    <nav data-role="gnb" class="dt-navbar dt-navbar-width dt-navbar-left"></nav>
+    <!-- Sub Menu -->
+    <aside></aside>
+    <!-- Content -->
+    <section data-role="view" class="dt-content-wrapper clearfix"></section>
+    <!-- Footer -->
+    <footer></footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!--<script src="node_modules/jquery-ui/jquery-ui.js"></script>-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--[if lte IE 9]><script src="node_modules/html5-history-api/history.min.js"></script><![endif]-->
+    <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="node_modules/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+    <script src="node_modules/datatables.net-select/js/dataTables.select.js"></script>
+    <script src="node_modules/requirejs/require.js"></script>
+    <script src="src/require.config.js"></script>
+    <script>
+        require(['app'], function (app) {
+            app.init(function (err) {
+                console.log('initialized', err);
+            });
+        });
+    </script>
+</body>
+</html>

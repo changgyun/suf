@@ -1,0 +1,202 @@
+////
+/// table
+////
+
+$table-background: transparent  !default;
+$table-color-scale: 5% !default;
+$table-border: 1px solid #c4d0d9 !default;
+$table-padding: 10px 10px !default;
+$table-hover-scale: 2% !default;
+$table-font-size: 13px !default;
+$table-row-hover: #e6edf2 !default;
+$table-row-select: #c9d8e3 !default;
+$table-row-stripe-hover: #23323c !default;
+$table-striped-background: transparent !default;
+$table-stripe: even !default;
+$table-head-background: #f2f6f8 !default;
+$table-foot-background: transparent !default;
+$table-head-font-color: #239ae3 !default;
+$table-body-font-color: #496070 !default;
+$table-body-font-select: #1e2123 !default;
+$table-align: (
+        left: left,
+        center: center,
+        right: right
+) !default;
+$show-header-for-stacked: false !default;
+
+@mixin table-styles($stripe: $table-stripe) {
+  thead,
+  tbody,
+  tfoot {
+    background-color: $table-background;
+    font-size: $table-font-size;
+  }
+  caption {
+    font-weight: $global-weight-normal;
+    padding: $table-padding;
+  }
+  thead,
+  tfoot {
+    border: $table-border;
+    background: $table-head-background;
+    color: $table-head-font-color;
+    font-weight: $table-font-size;
+    tr {
+      background: transparent;
+    }
+    th,
+    td {
+      border: $table-border;
+      padding: $table-padding;
+      font-weight: $global-weight-bold;
+      text-align: map-get($table-align, left);
+      &.left     { text-align: map-get($table-align, left); }
+      &.center    { text-align: map-get($table-align, center); }
+      &.right    { text-align: map-get($table-align, right); }
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: $table-striped-background;
+      /*@if $stripe == even {
+        &:nth-child(even) {
+          background-color: $table-striped-background;
+        }
+      }
+      @else if $stripe == odd {
+        &:nth-child(odd) {
+          background-color: $table-striped-background;
+        }
+      }*/
+    }
+
+    th,
+    td {
+      padding: $table-padding;
+      color: $table-body-font-color;
+      border-bottom: $table-border;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      word-wrap:normal;
+      overflow: hidden;
+      &.left     { text-align: map-get($table-align, left); }
+      &.center    { text-align: map-get($table-align, center); }
+      &.right    { text-align: map-get($table-align, right); }
+    }
+  }
+}
+
+@mixin table(
+$stripe: $table-stripe,
+$nest: false
+) {
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: $global-margin;
+  border-radius: $global-radius;
+
+  @include table-styles();
+
+  /*@if $nest {
+    @include table-styles($stripe);
+  }
+  @else {
+    @at-root {
+      @include table-styles($stripe);
+    }
+  }*/
+}
+
+@mixin table-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+@mixin table-hover-row {
+  tbody {
+    tr {
+      &:hover {
+        background-color: $table-row-hover;
+      }
+      &.select {
+        background-color: $table-row-select;
+        color: $table-body-font-select;
+      }
+    }
+  }
+}
+
+@mixin table-hover-cell {
+  tbody {
+    tr {
+      td {
+        &:hover {
+          background-color: $table-row-hover;
+        }
+        &.select {
+          background-color: $table-row-select;
+          color: $table-body-font-select;
+        }
+      }
+    }
+  }
+}
+
+@mixin table-stack($header: $show-header-for-stacked) {
+  @if $header {
+    thead {
+      th:first-child {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+    }
+  }
+  @else {
+    thead {
+      display: none;
+    }
+  }
+
+  tfoot {
+    display: none;
+  }
+
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  td {
+    border-top: 0;
+  }
+}
+
+@mixin suf-table($nest: false) {
+  table {
+    @include table($nest: $nest);
+  }
+
+ table.stack {
+      @include table-stack;
+  }
+
+  table.scroll {
+    @include table-scroll;
+  }
+
+  table.hover-row {
+    @include table-hover-row;
+  }
+  table.hover-cell {
+    @include table-hover-cell;
+  }
+}
+
+@include suf-table;
