@@ -32,7 +32,10 @@ module.exports = function(grunt) {
         },
         watch: {
             css: {
-                files: 'wp/**/*.scss',
+                files: [
+                    'wp/**/*.scss',
+                    'wp/**/*.html'
+                ],
                 tasks: ['sass', 'copy:sass']
             }
         },

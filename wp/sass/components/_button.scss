@@ -2,7 +2,7 @@
 /// button
 ////
 
-$button-padding: 0.85em 1em !default;
+$button-padding: 0.438em 0.8em !default;
 $button-margin: 0 0 $global-margin 0 !default;
 $button-fill: solid !default;
 $button-background: $primary-color !default;
@@ -11,8 +11,8 @@ $button-color: #fff !default;
 $button-color-alt: #000 !default;
 $button-radius: $global-radius !default;
 $button-sizes: (
-        small: 012rem,
-        default: 14px,
+        small: 0.721rem,
+        default: 1rem,
 ) !default;
 $button-opacity-disabled: 0.4 !default;
 @if $global-text-direction == 'rtl' {
@@ -78,7 +78,7 @@ $color: $button-color
   &:hover, &:focus {
     background-color: #e9f5fd;
     color: #5d656b!important;
-    border: 1px #2ca1e9 solid;
+    border: 1px #000 solid;
   }
   &:active {
     background-color: #e9f5fd;
@@ -114,7 +114,7 @@ $color: $button-color
 
 @mixin button-dropdown(
 $size: 0.4em,
-$color: $white,
+$color: $white-color,
 $offset: get-side($button-padding, right)
 ) {
   &::after {
@@ -195,7 +195,7 @@ $style: $button-fill
         &.#{$name}:active {
           @include button-style($color, auto);
           outline: 0;
-          box-shadow:inset 0 0 10px rgba(0,0,0,0.3);
+          box-shadow:inset 0 0 7px rgba(0,0,0,0.2);
         }
       }
     }

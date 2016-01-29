@@ -11,7 +11,7 @@ $secondary-color: #03afef !default;
 $success-color: #00ca9d !default;
 $warning-color: #ffba00 !default;
 $alert-color: #ff2a8a !default;
-$white: #fefefe !default;
+$white-color: #fefefe !default;
 
 $primary-hover-color: #2ca1e9 !default;
 $secondary-hover-color: #29c5ff !default;
@@ -32,43 +32,12 @@ $light-gray: #e6e6e6 !default;
 $medium-gray: #cacaca !default;
 $dark-gray: #8a8a8a !default;
 $black: #0a0a0a !default;
+$white: #fefefe !default;
 
 $body-background: $white !default;
 $body-font-color: $black !default;
 $body-font-family: 'Nanum Gothic','Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !default;
 $body-antialiased: true !default;
-
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 800;
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format('woff2'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format('woff'),
-  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format('truetype');
-}
-
 $global-margin: 1rem !default;
 $global-padding: 1rem !default;
 $global-weight-normal: normal !default;
@@ -285,7 +254,7 @@ $set-active-colors: (
   optgroup,
   select,
   textarea {
-    color: inherit; /* 1 */
+    //color: inherit; /* 1 */
     font: inherit; /* 2 */
     margin: 0; /* 3 */
   }

@@ -4,21 +4,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>ODM Admin</title>
     <link rel="stylesheet" media="all" href="../style/stylesheet.css">
-    <link rel="stylesheet" href="zenburn.css">
+    <link rel="stylesheet" href="../guide/zenburn.css">
 </head>
 <body>
     <div class="guide_container">
         <div class="small-3 columns menu ng-scope">
             <h1>DT publishing guide v0.1</h1>
             <ul>
-                <li><a href="#grid">Grid</a></li>
-                <li><a href="#table">Table</a></li>
-                <li><a href="#button">Button</a></li>
-                <li><a href="#icon">Icons</a></li>
-                <li>----------------------------</li>
                 <li>General
                     <ul>
-
+                        <li><a href="#grid">Grid</a></li>
+                        <li><a href="#icon">Icons</a></li>
                     </ul>
                 </li>
                 <li>Layout
@@ -26,38 +22,41 @@
 
                     </ul>
                 </li>
-                <li>Form
-                    <ul>
-                        <li><a href=""></a><a href="">Textbox</a></li>
-                        <li><a href="">Textarea</a></li>
-                        <li><a href="">Radio</a></li>
-                        <li><a href="">Checkbox</a></li>
-                        <li><a href="">Combobox</a></li>
-                        <li><a href="">File upload</a></li>
-                        <li><a href="">Validation</a></li>
-                    </ul>
-                </li>
                 <li>Element
                     <ul>
-
-                        <li><a href="">Badge</a></li>
+                        <li><a href="#button">Button</a></li>
                     </ul>
                 </li>
-                <li>Component
+                <li>Containers
                     <ul>
-
-                        <li><a href="">Tabs</a></li>
-                        <li><a href="">Alert</a></li>
-                        <li><a href="">Loader</a></li>
-                        <li><a href="">Progress</a></li>
+                        <li><a href="#table">Table</a></li>
+                    </ul>
+                </li>
+                <li>Form
+                    <ul>
+                        <li><a href="#textbox">Textbox</a></li>
+                        <li><a href="#checkbox">Checkbox</a></li>
+                        <li><a href="#combobox">Combobox</a></li>
                     </ul>
                 </li>
                 <li>Navigation
                     <ul>
-                        <li><a href="">Pagination</a></li>
-                        <li><a href="">Breadcrumbs</a></li>
+
                     </ul>
                 </li>
+                <li>Component
+                    <ul>
+                    </ul>
+                </li>
+                <li>----------------------------</li>
+                <li><a href="">Pagination</a></li>
+                <li><a href="">Textarea</a></li>
+                <li><a href="">Validation</a></li>
+                <li><a href="">Tabs</a></li>
+                <li><a href="">Alert</a></li>
+                <li><a href="">Loader</a></li>
+                <li><a href="">Progress</a></li>
+                <li><a href="">Breadcrumbs</a></li>
                 <li><a href=""></a><a href="">Dropdown</a></li>
                 <li><a href="">Modal</a></li>
             </ul>
@@ -397,12 +396,11 @@
 </code></pre>
 
             </section>
-
             <section id="table" class="section">
                 <h2>Table</h2>
                 <hr>
                 <h3>Basic</h3>
-                <div class="table">
+                <div class="guide_table">
                     <table>
                         <thead>
                         <tr>
@@ -455,7 +453,7 @@
 &lt;/table&gt;
 </code></pre>
             <h3>Hover-row & Select-row</h3>
-            <div class="table">
+            <div class="guide_table">
                 <table class="hover-row">
                     <thead>
                     <tr>
@@ -508,7 +506,7 @@
 &lt;/table&gt;
 </code></pre>
                 <h3>Hover-cell & Select-row</h3>
-                <div class="table">
+                <div class="guide_table">
                     <table class="hover-cell">
                         <thead>
                         <tr>
@@ -561,7 +559,7 @@
 &lt;/table&gt;
 </code></pre>
                 <h3>Scroll</h3>
-                <div class="table">
+                <div class="guide_table">
                     <table class="scroll">
                         <thead>
                         <tr>
@@ -593,7 +591,7 @@
     ...
 </code></pre>
                 <h3>stack</h3>
-                <div class="table">
+                <div class="guide_table">
                     <table class="stack">
                         <thead>
                         <tr>
@@ -625,7 +623,7 @@
     ...
 </code></pre>
                 <h3>align</h3>
-                <div class="table">
+                <div class="guide_table">
                     <table>
                         <thead>
                         <tr>
@@ -663,8 +661,6 @@
 </code></pre>
 
             </section>
-
-
             <section id="button" class="section">
                 <h2>Button</h2>
                 <hr>
@@ -683,6 +679,21 @@
 &lt;button type="button" class="warning button"&gt;success&lt;/button&gt;
 &lt;button type="button" class="default button"&gt;success&lt;/button&gt;
 </code></pre>
+                <h3>size</h3>
+                <button type="button" class="primary button small">success</button>
+                <button type="button" class="secondary button small">success</button>
+                <button type="button" class="alert button small">alert</button>
+                <button type="button" class="success button small">success</button>
+                <button type="button" class="warning button small">success</button>
+                <button type="button" class="default button small">success</button>
+<pre><code class="html">//size
+&lt;button type="button" class="primary button small"&gt;success&lt;/button&gt;
+&lt;button type="button" class="secondary button small"&gt;success&lt;/button&gt;
+&lt;button type="button" class="alert button small"&gt;alert&lt;/button&gt;
+&lt;button type="button" class="success button small"&gt;success&lt;/button&gt;
+&lt;button type="button" class="warning button small"&gt;success&lt;/button&gt;
+&lt;button type="button" class="default button small"&gt;success&lt;/button&gt;
+</code></pre>
                 <h3>disable</h3>
                 <button type="button" class="primary button" disabled>success</button>
                 <button type="button" class="secondary button" disabled>success</button>
@@ -697,29 +708,255 @@
 </code></pre>
 
             </section>
-
-
             <section id="icon" class="section">
                 <h2>icon</h2>
-                <p>icon desc</p>
                 <hr>
                 <h3>Basic</h3>
-                <p>icon desc</p>
-                <pre><code class="html">&lt;button type="button" class="tiny button"&gt; So Tiny &lt;/button&gt;</code></pre>
-                <span class="icon-checkbox"></span>
-                <span class="icon-dropdown"></span>
-                <span class="icon-nav_left"></span>
-                <span class="icon-nav_right"></span>
-                <span class="icon-search"></span>
-                <span class="icon-t_dropdown"></span>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-check"></span>
+                            <span class="iconText">check</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-dropdown"></span>
+                            <span class="iconText">dropdown</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-nav_left"></span>
+                            <span class="iconText">nav_left</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-nav_right"></span>
+                            <span class="iconText">nav_right</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-search"></span>
+                            <span class="iconText">search</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-table_dropdown"></span>
+                            <span class="iconText">table_dropdown</span>
+                        </div>
+                    </div>
+                </div>
+<pre><code class="html">//Basic
+&lt;span class="icons icons-check"&gt;&lt;/span&gt;
+..
+</code></pre>
+                <h3>spin</h3>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-check icons-spin"></span>
+                            <span class="iconText">check</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-dropdown icons-spin"></span>
+                            <span class="iconText">dropdown</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-nav_left icons-spin"></span>
+                            <span class="iconText">nav_left</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-nav_right icons-spin"></span>
+                            <span class="iconText">nav_right</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-search icons-spin"></span>
+                            <span class="iconText">search</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-table_dropdown icons-spin"></span>
+                            <span class="iconText">table_dropdown</span>
+                        </div>
+                    </div>
+                </div>
+<pre><code class="html">//Spin
+&lt;span class="icons icons-check icons-spin"&gt;&lt;/span&gt;
+..
+</code></pre>
 
-                <span class="icon-checkbox" style="font-size: 70px"></span>
-                <span class="icon-dropdown"  style="font-size: 70px"></span>
-                <span class="icon-nav_left"  style="font-size: 70px"></span>
-                <span class="icon-nav_right" style="font-size: 70px"></span>
-                <span class="icon-search" style="font-size: 70px"></span>
-                <span class="icon-t_dropdown" style="font-size: 70px"></span>
+                <h3>size</h3>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-check icons-2x"></span>
+                            <span class="iconText">icons-2x</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-dropdown icons-3x"></span>
+                            <span class="iconText">icons-3x</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-nav_left icons-4x"></span>
+                            <span class="iconText">icons-4x</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-nav_right icons-5x"></span>
+                            <span class="iconText">icons-5x</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-search icons-6x"></span>
+                            <span class="iconText">icons-6x</span>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="html">//Size
+                    &lt;span class="icons icons-check icons-2x"&gt;&lt;/span&gt;
+                    ..
+                </code></pre>
+                <h3>rotate</h3>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-dropdown icons-rotate-90"></span>
+                            <span class="iconText">icons-rotate-90</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="guide_icons">
+                            <span class="icons icons-dropdown icons-rotate-180"></span>
+                            <span class="iconText">icons-rotate-180</span>
+                        </div>
+                    </div>
+                </div>
             </section>
+<pre><code class="html">//Rotate
+    &lt;span class="icons icons-dropdown icons-rotate-90"&gt;&lt;/span&gt;
+    &lt;span class="icons icons-dropdown icons-rotate-180"&gt;&lt;/span&gt;
+    ..
+</code></pre>
+            </section>
+
+            <section id="textbox" class="section">
+                <h2>textbox</h2>
+                <hr>
+                <h3>Basic</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input type="text" value="value">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" placeholder="placeholder">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" placeholder="disable" disabled>
+                    </div>
+                </div>
+<pre><code class="html">//Basic
+&lt;input type="text" placeholder="Basic"&gt;
+&lt;input type="text" placeholder="Basic"&gt;
+&lt;input type="text" disable value="disable"&gt;
+..
+</code></pre>
+
+            </section>
+
+
+            <section id="checkbox" class="section">
+                <h2>checkbox</h2>
+                <hr>
+                <h3>Basic</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="checkType1"><label for="checkType1">checkType1</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="checkType2" checked><label for="checkType2">checked</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="checkType3" disabled><label for="checkType3">disabled</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="checkType4" disabled checked><label for="checkType4">disabled checked</label>
+                    </div>
+                </div>
+<pre><code class="html">//Basic
+&lt;input type="checkbox" id="checkType1"&gt;&lt;label for="checkType1"&gt;checkType1&lt;/label&gt;
+&lt;input type="checkbox" id="checkType2" checked&gt;&lt;label for="checkType2"&gt;checked&lt;/label&gt;
+&lt;input type="checkbox" id="checkType3" disabled&gt;&lt;label for="checkType3"&gt;disabled&lt;/label&gt;
+&lt;input type="checkbox" id="checkType4" disabled checked&gt;&lt;label for="checkType4"&gt;disabled checked&lt;/label&gt;
+</code></pre>
+
+            </section>
+
+            <section id="combobox" class="section">
+                <h2>combobox</h2>
+                <hr>
+                <h3>Basic</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <select>
+                            <option>combobox</option>
+                            <option>combobox type2</option>
+                            <option>combobox type3</option>
+                            <option>combobox type4</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select disabled>
+                            <option>disabled</option>
+                            <option>combobox type2</option>
+                            <option>combobox type3</option>
+                            <option>combobox type4</option>
+                        </select>
+                    </div>
+                </div>
+<pre><code class="html">//Basic
+&lt;input type="checkbox" id="checkType1"&gt;&lt;label for="checkType1"&gt;checkType1&lt;/label&gt;
+&lt;input type="checkbox" id="checkType2" checked&gt;&lt;label for="checkType2"&gt;checked&lt;/label&gt;
+&lt;input type="checkbox" id="checkType3" disabled&gt;&lt;label for="checkType3"&gt;disabled&lt;/label&gt;
+&lt;input type="checkbox" id="checkType4" disabled checked&gt;&lt;label for="checkType4"&gt;disabled checked&lt;/label&gt;
+</code></pre>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

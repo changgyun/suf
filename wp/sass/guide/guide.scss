@@ -8,7 +8,7 @@ html {
 .guide_container {
   box-sizing: border-box;
   padding-left: 224px;
-  h1 {font-size: 15px; margin-top: 10px; margin-bottom: 30px;}
+  h1 {font-size: 15px; margin-top: 10px; margin-bottom: 30px;font-weight: 400}
   .columns {
     float: left;
     &.menu {
@@ -26,8 +26,8 @@ html {
       background: #fff;
       width: 100%;
       padding: 20px;
-      h2 {font-size: 40px;font-weight: 800; margin-bottom: 10px; margin-top: 80px}
-      h3 {font-size: 18px;font-weight: 800; margin-bottom: 0; margin-top: 30px}
+      h2 {font-size: 40px;font-weight: 700; margin-bottom: 10px; margin-top: 80px;}
+      h3 {font-size: 18px;font-weight: 700; margin-bottom: 0; margin-top: 30px}
     }
   }
 }
@@ -61,6 +61,17 @@ html {
 }
 
 //TABLE
-.table {
+.guide_table {
   padding: 10px 0 0 0;
+}
+
+.guide_icons {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px #C5C5C5 solid;
+  text-align: center;
+  .iconText {
+    text-align: center;
+    display: block;
+  }
 }
