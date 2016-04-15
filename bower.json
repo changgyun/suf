@@ -1,0 +1,25 @@
+{
+  "name": "SUF",
+  "description": "S-Core UI Framework",
+  "main": "index.html",
+  "authors": [
+    "changgyun.woo <cg25.woo@samsung.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/changgyun/suf",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "d3": "~3.5.16",
+    "datatables": "~1.10.11",
+    "reset-css": "~2.0.2011012603",
+    "malihu-custom-scrollbar-plugin": "~3.1.3"
+  }
+}
