@@ -61,7 +61,7 @@ gulp.task("vendor", function() {
     var jsFilter = filter("**/*.js", {restore: true}),
         cssFilter = filter("**/*.css", {restore: true}),
         fontFilter = filter([ "**/*.eot", "**/*.svg", "**/*.ttf", "**/*.woff", "**/*.woff2" ], {restore: true});
-    return gulp
+    gulp
         .src("bower.json")
         .pipe(mainBowerFiles())
         .pipe(jsFilter)
@@ -82,7 +82,7 @@ gulp.task("vendor", function() {
  **********************************************************************************/
 
 gulp.task("resource", function() {
-    return gulp
+    gulp
         .src(target.resourceSrc)
         .pipe(gulp.dest(target.resourceDest));
 
@@ -93,7 +93,7 @@ gulp.task("resource", function() {
  **********************************************************************************/
 
 gulp.task("javascript", function() {
-    return gulp
+    gulp
         .src(target.jsSrc)
         .pipe(gulp.dest(target.jsDest));
 
@@ -104,7 +104,7 @@ gulp.task("javascript", function() {
  **********************************************************************************/
 
 gulp.task("clean", function() {
-    return gulp
+    gulp
         .src([target.dest + "/**/*.*"], {read: false})
         .pipe(clean({force: true}));
 });

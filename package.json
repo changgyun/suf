@@ -4,7 +4,7 @@
   "description": "S-Core UI Framework",
   "scripts": {
     "start": "node app.js",
-    "test": "gulp test"
+    "test": "gulp"
   },
   "author": "",
   "dependencies": {},

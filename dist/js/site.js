@@ -35,5 +35,9 @@ $(function(){
     $('.link-active').click(function(){
         $(this).toggleClass('is-active');
     });
+    $('.ham-menu').click(function(){
+        $('.container').toggleClass('menu-active');
+    });
+
 });
 
